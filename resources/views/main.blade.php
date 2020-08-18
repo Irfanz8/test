@@ -1,13 +1,15 @@
 @extends('head')
 
 @section('contens')
-<a href="user/add"> Add User</a>
+<div class="col-6">
+<a class="btn btn-primary" href="user/add"> Add User</a>
+<div>
 @if (session('status'))
     <div class="alert alert-success">
         {{ session('status') }}
     </div>
 @endif
-    <table class="table table-bordered" id="users">
+    <table class="table table-bordered table-striped" id="users">
         <thead>
             <tr>
                 <th>Id</th>
